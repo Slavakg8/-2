@@ -1,5 +1,5 @@
 settings = {
-	'TOKEN': 'ODYwODY5NTkyMTMzNDAyNjc0.YOBhSA.eNKMWbLZ9yBN1_qO5zWqSIpE5kU', # Получение токена - https://prnt.sc/uofhu
+	'TOKEN': 'ODYwODY5NTkyMTMzNDAyNjc0.YOBhSA.G4kdpp2kj3E1N1MT3YxMJFPHxtY', # Получение токена - https://prnt.sc/uofhu
 	'NAME BOT': 'Slava', # Имя вашего бота
 	'ID': '860869592133402674', # Получение ID - https://prnt.sc/uofik2
 	'PREFIX': '#2808', # Префикс
