@@ -1,8 +1,19 @@
+import os
+
+
+def _get_env(name, default=None, required=False):
+    value = os.getenv(name, default)
+    if required and not value:
+        raise RuntimeError(f"Missing required environment variable: {name}")
+    return value
+
+
 settings = {
-	'TOKEN': 'ODYwODY5NTkyMTMzNDAyNjc0.YOBhSA.G4kdpp2kj3E1N1MT3YxMJFPHxtY', # Получение токена - https://prnt.sc/uofhu
-	'NAME BOT': 'Slava', # Имя вашего бота
-	'ID': '860869592133402674', # Получение ID - https://prnt.sc/uofik2
-	'PREFIX': '#2808', # Префикс
-	'OWNER':'Слава#7777',    # ИЗМЕНЯЙТЕ НА СВОЙ NICK:ID (Пример: Toil#5605)
-	'OWNER NAME':'Слава' # ИМЯ ВЛАДЕЛЬЦА (Пример: Toil)
+    "TELEGRAM_TOKEN": _get_env("TELEGRAM_TOKEN", required=True),
+    "OPENAI_API_KEY": _get_env("OPENAI_API_KEY", required=True),
+    "OPENAI_MODEL": _get_env("OPENAI_MODEL", "gpt-4o-mini"),
+    "SYSTEM_PROMPT": _get_env(
+        "SYSTEM_PROMPT",
+        "Ты полезный ассистент. Отвечай кратко и по делу.",
+    ),
 }
